@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Page for Apri Jonita Yenda</title>
+    <style>
+        body {
+            background-color: #ffe6f2;
+            color: #ff4081;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        h1, h2, p {
+            margin: 10px;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff4081;
+            transform: rotate(-45deg);
+            animation: float 5s infinite ease-in-out;
+        }
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff4081;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+        .heart::after {
+            left: -10px;
+            top: 0;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+            }
+            50% {
+                transform: translateY(-200px) rotate(-45deg);
+            }
+            100% {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+        .youtube-video {
+            margin-top: 20px;
+        }
+        .love-message {
+            font-size: 18px;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        .surprise {
+            margin-top: 20px;
+            background-color: #ff79c6;
+            border: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .surprise:hover {
+            background-color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    <h1>APRIL JONITA YENDAAA 💕💕💕</h1>
+    <h2>CINTAKUUUUUUUU...........</h2>
+    <div class="love-message">
+        <p>
+            Kamu capek ya hari ini? Apa saja yang terjadi, sayang? Aku tahu, mungkin banyak hal yang membuat kamu lelah, 
+            mungkin ada hal yang membuat kamu sedih, tapi aku mau kamu tahu satu hal: 
+            aku selalu di sini untuk kamu, APRIL JONITA YENDAAA, CINTAKUUUU! 💗💗💗
+        </p>
+        <p>
+            Kalau rasanya berat, ingat ada aku yang siap mendengarkan semua ceritamu, 
+            ada aku yang siap menghapus semua air mata kamu. Kamu nggak pernah sendirian, sayang.
+        </p>
+        <p>
+            Aku pengen kamu tahu, setiap detik bersamamu itu berharga. Aku nggak akan pernah bosan 
+            buat bilang aku mencintai kamu lebih dari apa pun. Bayu Ramazandi mencintai Apri Jonita Yenda, 
+            SAYANGGGKUUUU! ❤️❤️❤️
+        </p>
+    </div>
+
+    <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0aLSbYEYWTo" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+    </div>
+
+    <button class="surprise" onclick="sendMessage()">Kirim Kejutan untuk BAYU</button>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+
+        function sendMessage() {
+            const message = `Bayu Ramazandi: \n\nApri Jonita Yenda, cintaku! Aku mencintaimu lebih dari kata-kata bisa ungkapkan. Kamu capek hari ini? Aku siap mendengar semua ceritamu. Kamu adalah alasan aku bahagia. ❤️`;
+            window.open(`https://wa.me/62089509958746?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
